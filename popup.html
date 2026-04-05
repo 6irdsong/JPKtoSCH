@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>漢字→簡体字</h1>
+
+    <div class="toggle-row">
+      <span class="label">変換</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle">
+        <span class="slider"></span>
+      </label>
+      <span id="status" class="status">OFF</span>
+    </div>
+
+    <div class="toggle-row" style="margin-top:10px">
+      <span class="label">二簡字</span>
+      <label class="switch">
+        <input type="checkbox" id="erjianToggle">
+        <span class="slider"></span>
+      </label>
+      <span class="status hint">1977年案</span>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <label for="fontMode">フォント統一</label>
+      <select id="fontMode">
+        <option value="auto">自動（セリフ/サンセリフ判定）</option>
+        <option value="sans">Noto Sans SC</option>
+        <option value="serif">Noto Serif SC</option>
+        <option value="off">なし（ブラウザ既定）</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <div class="section">
+      <label for="excludedDomains">除外ドメイン（1行に1つ）</label>
+      <textarea id="excludedDomains" rows="4" placeholder="example.com&#10;news.example.jp"></textarea>
+      <button id="saveDomains">保存</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
